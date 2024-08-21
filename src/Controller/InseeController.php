@@ -16,18 +16,6 @@ class InseeController extends AbstractController
         $this->inseeApiService = $inseeApiService;
     }
 
-    // #[Route('/token', name: 'token', methods:['GET'])]
-    // public function getToken(): Response
-    // {
-    //     $token = $this->inseeApiService->getToken();
-
-    //     if ($token) {
-    //         return new Response($token);
-    //     }
-
-    //     return new Response('Failed to retrieve token', Response::HTTP_BAD_REQUEST);
-    // }
-
     #[Route('/entreprise/search/{siret}', name: 'entreprise.search', methods:['GET'])]
     public function getCompanyInfo(string $siret): Response
     {
